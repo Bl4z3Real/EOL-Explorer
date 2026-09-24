@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: http: https:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<title>EOL Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="title">
+    <img src="icon.png" alt="" width="20" height="20">
+    <span id="ttl">EOL Explorer</span>
+  </div>
+
+  <div id="menubar"></div>
+  <div id="tabs"></div>
+
+  <div id="bar">
+    <button class="btn flat nb" id="back" title="Indietro (Alt+←)"><b>◄</b><small>Indietro</small></button>
+    <button class="btn flat nb" id="fwd" title="Avanti (Alt+→)"><b>►</b><small>Avanti</small></button>
+    <button class="btn flat nb" id="stop" title="Interrompi"><b>✖</b><small>Stop</small></button>
+    <button class="btn flat nb" id="reload" title="Aggiorna (F5)"><b>↻</b><small>Aggiorna</small></button>
+    <button class="btn flat nb" id="homeBtn" title="Pagina iniziale (Alt+Home)"><b>🏠</b><small>Home</small></button>
+    <button class="btn flat nb" id="panelBtn" title="Preferiti e cronologia"><b>⭐</b><small>Preferiti</small></button>
+    <div class="sep"></div>
+    <form id="addr" autocomplete="off">
+      <label for="url"><u>I</u>ndirizzo</label>
+      <input id="url" class="sunk" type="text" spellcheck="false" placeholder="Scrivi un indirizzo o cerca…">
+      <button class="btn" type="submit">Vai</button>
+    </form>
+    <form id="sbox" autocomplete="off">
+      <input id="sq" class="sunk" type="text" placeholder="Cerca" aria-label="Cerca">
+      <button class="btn flat" type="submit" title="Cerca">🔍</button>
+    </form>
+    <div id="throb" class="raised" title="Caricamento"><span>🌐</span></div>
+  </div>
+
+  <div id="main">
+    <div id="rail">
+      <button class="btn rb c1" data-p="fav">Preferiti</button>
+      <button class="btn rb c2" data-p="hist">Cronologia</button>
+      <button class="btn rb c3" data-p="chan">Canali</button>
+    </div>
+    <div id="panel">
+      <div id="phead"><span id="ptitle"></span><button class="btn tb" id="pclose">✕</button></div>
+      <div id="pbody" class="sunk"></div>
+    </div>
+    <div id="viewcol" class="sunk">
+      <div id="find">
+        <label for="fq">Trova:</label>
+        <input id="fq" class="sunk" type="text">
+        <span id="fcount"></span>
+        <button class="btn" id="fprev" title="Precedente">▲</button>
+        <button class="btn" id="fnext" title="Successivo">▼</button>
+        <button class="btn" id="fclose" title="Chiudi">✕</button>
+      </div>
+      <div id="stage">
+        <div id="err">
+          <div class="dlgbox raised">
+            <div class="dt">Impossibile aprire la pagina</div>
+            <div class="db"><p id="errmsg"></p><p id="errurl"></p></div>
+            <div class="df"><button class="btn" id="errretry">Riprova</button><button class="btn" id="errhome">Pagina iniziale</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="status">
+    <div id="stat">Fatto</div>
+    <div id="zoomst">100%</div>
+    <div id="sec">🏠 Locale</div>
+    <div id="clock">--:--</div>
+  </div>
+</div>
+
+<div id="pop" class="raised"></div>
+
+<template id="homeTpl">
+<div id="home">
+  <div class="h-head">
+    <div class="h-logo"><img src="icon.png" alt="" width="52" height="52"><span>EOL<i>Explorer</i></span></div>
+    <div class="h-search">
+      <div class="h-cats" id="cats"></div>
+      <form id="hform" autocomplete="off">
+        <input id="hq" type="text" placeholder="Cosa cerchi oggi?" aria-label="Cerca">
+        <button class="btn" type="submit">Cerca</button>
+      </form>
+    </div>
+  </div>
+  <div class="h-body">
+    <div class="h-main">
+      <h1 id="greet">Buongiorno</h1>
+      <div id="hdate"></div>
+      <div class="h-tabs" id="htabs"></div>
+      <div class="h-panel sunk" id="htiles"></div>
+      <div class="h-hero">
+        <h2>Torna al 1999</h2>
+        <p>Con la Macchina del tempo ogni sito si apre com'era nel 1999, grazie all'Internet Archive.</p>
+        <button class="btn" id="tmBtn"></button>
+      </div>
+    </div>
+    <aside class="h-side">
+      <div class="box raised"><h3>Ora esatta</h3><div class="lcd" id="lcd">00:00:00</div></div>
+      <div class="box raised"><h3>Visitatori</h3><div class="lcd" id="visits">000000</div></div>
+      <div class="box raised"><h3>I tuoi preferiti</h3><div id="hfavs"></div></div>
+    </aside>
+  </div>
+  <div class="h-mar"><span>★ Benvenuto su EOL Explorer ★ Il browser che naviga come nel 1999, ma va veloce come oggi ★ Risoluzione consigliata 800x600 (ma va bene anche 4K) ★ Sito in costruzione 🚧 ★</span></div>
+</div>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
