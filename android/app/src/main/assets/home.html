@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EOL Explorer</title>
+<style>
+:root{--face:#c0c0c0;--hi:#fff;--lo:#808080;--dk:#000;--navy:#0e1f2b;--blue:#1f5478;--yellow:#f2e600}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.35 Tahoma,Verdana,Geneva,sans-serif;background:#fff;color:#111}
+.raised{border:2px solid;border-color:var(--hi) var(--dk) var(--dk) var(--hi);box-shadow:inset -1px -1px var(--lo);background:var(--face)}
+.sunk{border:2px solid;border-color:var(--lo) var(--hi) var(--hi) var(--lo);box-shadow:inset 1px 1px var(--dk);background:#fff}
+.head{padding:14px 14px 12px;color:#fff;background:linear-gradient(#2b7aa6,#0e2a3c)}
+.logo{display:flex;align-items:center;gap:10px;font:900 30px/1 "Arial Black",Impact,sans-serif;letter-spacing:-1.5px;text-shadow:2px 2px 0 rgba(0,0,0,.45);margin-bottom:12px}
+.logo img{width:48px;height:48px}
+.logo b{color:var(--yellow)}
+.logo i{font-style:normal;font-size:19px;letter-spacing:-.5px;margin-left:6px}
+.search{padding:6px 8px 8px;background:#d5f1b6;border:2px solid #74bd3d}
+.cats{display:flex;flex-wrap:wrap;gap:2px;margin-bottom:5px}
+.cats button{border:0;background:transparent;color:#0a4a99;padding:6px 9px;font:bold 14px Tahoma,Verdana,sans-serif}
+.cats button.on{background:#fff;border:1px solid #74bd3d;border-bottom-color:#fff;color:#000}
+form{display:flex;gap:6px;margin:0}
+input[type=text]{flex:1;min-width:0;height:42px;padding:4px 8px;font-size:16px;background:#fff;border:2px solid;border-color:#666 #fff #fff #666}
+.go{min-width:76px;height:42px;font:15px Tahoma,Verdana,sans-serif;color:#000;background:#e6e6e6;border:2px solid;border-color:#fff #000 #000 #fff;box-shadow:inset -1px -1px #808080}
+.go:active{border-color:#000 #fff #fff #000;box-shadow:inset 1px 1px #808080}
+main{padding:14px}
+h1{margin:0;font:normal 28px/1.1 "Trebuchet MS",Verdana,sans-serif;color:var(--blue)}
+#date{margin:2px 0 12px;opacity:.75;text-transform:capitalize}
+.tabs{display:flex;flex-wrap:wrap;gap:2px}
+.tabs button{padding:8px 13px;border:1px solid var(--lo);border-bottom:0;background:var(--face);font:14px Tahoma,Verdana,sans-serif;color:#000}
+.tabs button.on{background:#fff;font-weight:bold;position:relative;top:1px}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:10px;margin-bottom:14px;border:1px solid var(--lo)}
+.tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 6px;text-align:center;text-decoration:none;color:#000;min-height:82px}
+.tile:active{border-color:var(--dk) var(--hi) var(--hi) var(--dk)}
+.tile b{font-size:28px;line-height:1}
+.hero{padding:16px;color:#fff;background:linear-gradient(120deg,#0e2a3c,#1f5478 60%,#3a86b0);border:3px ridge #fff;margin-bottom:14px}
+.hero h2{margin:0 0 4px;font:900 27px/1 "Arial Black",Impact,sans-serif;letter-spacing:-1px;color:var(--yellow);text-shadow:3px 3px 0 rgba(0,0,0,.35)}
+.hero p{margin:0 0 12px}
+.btn{display:inline-block;padding:10px 14px;color:#000;text-decoration:none;font-size:14px}
+.btn:active{border-color:var(--dk) var(--hi) var(--hi) var(--dk)}
+.box{padding:8px 10px;margin-bottom:12px}
+.box h3{margin:0 0 6px;font-size:13px;color:var(--blue)}
+.lcd{font:bold 26px/1 "Courier New",monospace;color:#39ff5a;background:#031403;padding:6px 8px;text-align:center;letter-spacing:2px;border:2px inset #444}
+.fav{display:block;padding:10px 4px;color:#111;text-decoration:none;border-bottom:1px dotted var(--lo)}
+.mar{overflow:hidden;white-space:nowrap;background:#000;color:#39ff5a;font:13px "Courier New",monospace;padding:5px 0}
+.mar span{display:inline-block;padding-left:100%;animation:mq 26s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+@media(min-width:600px){.tiles{grid-template-columns:repeat(4,1fr)}}
+@media(prefers-reduced-motion:reduce){.mar span{animation:none}}
+</style>
+</head>
+<body>
+<div class="head">
+  <div class="logo"><img src="icon.png" alt=""><span><b>EOL</b><i>Explorer</i></span></div>
+  <div class="search">
+    <div class="cats" id="cats"></div>
+    <form id="f" autocomplete="off">
+      <input type="text" id="q" placeholder="Cosa cerchi oggi?" autocapitalize="off" autocorrect="off" aria-label="Cerca">
+      <button class="go" type="submit">Cerca</button>
+    </form>
+  </div>
+</div>
+<main>
+  <h1 id="greet">Buongiorno</h1>
+  <div id="date"></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="tiles" id="tiles"></div>
+  <div class="hero">
+    <h2>Torna al 1999</h2>
+    <p>Con la Macchina del tempo ogni sito si apre com'era nel 1999, grazie all'Internet Archive.</p>
+    <a class="btn raised" id="tm" href="eol://tm"></a>
+  </div>
+  <div class="box raised"><h3>Ora esatta</h3><div class="lcd" id="lcd">00:00:00</div></div>
+  <div class="box raised"><h3>Visitatori</h3><div class="lcd" id="visits">000000</div></div>
+  <div class="box raised"><h3>I tuoi preferiti</h3><div id="favs"></div></div>
+</main>
+<div class="mar"><span>★ Benvenuto su EOL Explorer ★ Il browser che naviga come nel 1999, ma va veloce come oggi ★ Sito in costruzione 🚧 ★</span></div>
+
+<script>
+(function(){
+  var ENG = {
+    google:'https://www.google.com/search?q=',
+    images:'https://www.google.com/search?tbm=isch&q=',
+    video:'https://www.youtube.com/results?search_query=',
+    news:'https://www.google.com/search?tbm=nws&q=',
+    maps:'https://www.google.com/maps/search/'
+  };
+  var CATS = [['Web','google'],['Immagini','images'],['Video','video'],['Notizie','news'],['Mappe','maps']];
+  var TILES = {
+    'Esplora':[['🔎','Google','https://www.google.com/'],['▶️','YouTube','https://www.youtube.com/'],['📚','Wikipedia','https://it.wikipedia.org/'],['🗺️','Mappe','https://www.openstreetmap.org/']],
+    'Retro':[['🕰️','Wayback Machine','https://web.archive.org/'],['🕹️','Internet Arcade','https://archive.org/details/internetarcade'],['🏚️','Neocities','https://neocities.org/browse'],['🏀','Space Jam 1996','https://www.spacejam.com/1996/']],
+    'Svago':[['📻','Radio Garden','https://radio.garden/'],['🎬','IMDb','https://www.imdb.com/'],['👾','Reddit','https://www.reddit.com/'],['🎮','Twitch','https://www.twitch.tv/']],
+    'Strumenti':[['🌍','Traduttore','https://translate.google.com/'],['✉️','Gmail','https://mail.google.com/'],['💬','WhatsApp Web','https://web.whatsapp.com/'],['📖','Wikizionario','https://it.wiktionary.org/']]
+  };
+  var cat = 'google', tab = 'Esplora', state = {favs:[], tm:false, visits:0};
+  var $ = function(id){ return document.getElementById(id); };
+
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+
+  function render(){
+    var c = $('cats'); c.textContent = '';
+    CATS.forEach(function(x){
+      var b = el('button', x[1] === cat ? 'on' : '', x[0]); b.type = 'button';
+      b.onclick = function(){ cat = x[1]; render(); };
+      c.appendChild(b);
+    });
+    var t = $('tabs'); t.textContent = '';
+    Object.keys(TILES).forEach(function(n){
+      var b = el('button', n === tab ? 'on' : '', n);
+      b.onclick = function(){ tab = n; render(); };
+      t.appendChild(b);
+    });
+    var tl = $('tiles'); tl.textContent = '';
+    TILES[tab].forEach(function(x){
+      var a = el('a', 'tile raised'); a.href = x[2];
+      a.appendChild(el('b', '', x[0])); a.appendChild(el('span', '', x[1]));
+      tl.appendChild(a);
+    });
+    var f = $('favs'); f.textContent = '';
+    if (!state.favs.length) f.textContent = 'Ancora nessuno.';
+    state.favs.slice(0, 8).forEach(function(x){
+      var a = el('a', 'fav', '⭐ ' + x.t); a.href = x.u; f.appendChild(a);
+    });
+    $('tm').textContent = state.tm ? '⏪ Macchina del tempo: ATTIVA (tocca per disattivare)' : '⏪ Attiva la Macchina del tempo';
+    $('visits').textContent = String(state.visits).padStart(6, '0');
+  }
+
+  $('f').onsubmit = function(e){
+    e.preventDefault();
+    var q = $('q').value.trim(); if (!q) return;
+    if (/^https?:\/\//i.test(q)) location.href = q;
+    else if (/^[\w-]+(\.[\w-]+)+(\/\S*)?$/.test(q)) location.href = 'https://' + q;
+    else location.href = ENG[cat] + encodeURIComponent(q);
+  };
+
+  var h = new Date().getHours();
+  $('greet').textContent = h < 12 ? 'Buongiorno' : (h < 18 ? 'Buon pomeriggio' : 'Buonasera');
+  $('date').textContent = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  setInterval(function(){ $('lcd').textContent = new Date().toLocaleTimeString('it-IT'); }, 1000);
+
+  // chiamata dall'app con preferiti, stato della Macchina del tempo e contatore visite
+  window.eolInit = function(d){
+    state.favs = d.favs || []; state.tm = !!d.tm; state.visits = d.visits || 0; render();
+  };
+  render();
+})();
+</script>
+</body>
+</html>
