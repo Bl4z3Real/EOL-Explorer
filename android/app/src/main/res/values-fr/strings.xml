@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">Saisissez une adresse ou une recherche…</string>
+    <string name="go">OK</string>
+    <string name="new_tab">Nouvel onglet</string>
+    <string name="close_tab">Fermer l\'onglet</string>
+    <string name="add_favorite">Ajouter aux favoris</string>
+    <string name="favorites">Favoris</string>
+    <string name="history">Historique</string>
+    <string name="share_page">Partager la page</string>
+    <string name="time_machine">Machine à remonter le temps (web de 1999)</string>
+    <string name="desktop_version">Version ordinateur</string>
+    <string name="search_engine">Moteur de recherche</string>
+    <string name="clear_history">Effacer l\'historique</string>
+    <string name="about">À propos</string>
+    <string name="fav_added">Ajouté aux favoris</string>
+    <string name="fav_add_hint">Ouvrez une page pour l\'ajouter aux favoris</string>
+    <string name="fav_empty_hint">Aucun favori pour l\'instant : utilisez ⋮ › Ajouter aux favoris</string>
+    <string name="favorites_title">⭐ Favoris (appui long pour supprimer)</string>
+    <string name="close">Fermer</string>
+    <string name="history_empty">L\'historique est vide</string>
+    <string name="history_title">🕘 Historique</string>
+    <string name="history_cleared">Historique effacé</string>
+    <string name="engine_title">Moteur de recherche</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">Version 1.0\n\nLe navigateur à l\'apparence des années 90 et au moteur d\'aujourd\'hui.</string>
+    <string name="ok">OK</string>
+    <string name="desktop_on">Version ordinateur activée</string>
+    <string name="desktop_off">Version mobile activée</string>
+    <string name="tm_on">Machine à remonter le temps activée : les sites s\'ouvrent comme en 1999</string>
+    <string name="tm_off">Machine à remonter le temps désactivée</string>
+    <string name="download_started">Téléchargement : %1$s</string>
+    <string name="download_failed">Échec du téléchargement</string>
+    <string name="popup_blocked">Fenêtre pop-up bloquée</string>
+    <string name="no_app_for_link">Aucune application ne peut ouvrir ce lien</string>
+    <string name="share_chooser_title">Partager</string>
+    <string name="new_tab_title">Nouvel onglet</string>
+    <string name="status_done_placeholder">Terminé</string>
+    <string name="status_opening">Ouverture de %1$s…</string>
+    <string name="home_title">Page d\'accueil</string>
+</resources>
