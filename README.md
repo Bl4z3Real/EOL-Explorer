@@ -9,6 +9,24 @@ Solo PC: temi (EOL, Classic 98, Aqua 2000, Notte neon), zoom, trova nella pagina
 scorciatoie da tastiera (Ctrl+T, Ctrl+W, Ctrl+L, Ctrl+D, Ctrl+F, F5, Alt+←/→).
 Solo Android: blocco pop-up, versione desktop dei siti, condivisione, si può impostare come browser predefinito.
 
+## Lingue
+
+Italiano, inglese, spagnolo, francese, tedesco, portoghese, russo, cinese, giapponese, arabo.
+
+- **PC:** rileva la lingua del sistema al primo avvio; si può cambiare in qualsiasi momento da
+  *Strumenti › Lingua*. La scelta resta salvata.
+- **Android:** segue automaticamente la lingua impostata sul telefono (comportamento standard delle app
+  Android), sia nei menu sia nella pagina iniziale.
+- Per l'arabo il testo è tradotto e la pagina passa a scrittura da destra a sinistra, ma l'impaginazione
+  (posizione di barre e pulsanti) non è stata rifinita per il RTL: funziona, ma non è perfetta esteticamente.
+
+## Nota sulla build Android su GitHub
+
+Se la build Android falliva, la causa più comune è che l'ambiente di GitHub non aveva i pacchetti SDK
+Android necessari con le licenze accettate. Il workflow ora installa da sé `platforms;android-34` e
+`build-tools;34.0.0` prima di compilare. Se dovesse fallire di nuovo, apri il log del job **android** e
+incolla qui le ultime righe con l'errore.
+
 Attenzione: questo codice non è stato compilato né provato prima della consegna.
 Se un comando dà errore, incolla il messaggio in chat e lo correggiamo.
 
