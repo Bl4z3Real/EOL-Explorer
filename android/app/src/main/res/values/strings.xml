@@ -1,4 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">Type an address or search…</string>
+    <string name="go">Go</string>
+    <string name="new_tab">New tab</string>
+    <string name="close_tab">Close tab</string>
+    <string name="add_favorite">Add to favorites</string>
+    <string name="favorites">Favorites</string>
+    <string name="history">History</string>
+    <string name="share_page">Share page</string>
+    <string name="time_machine">Time Machine (1999 web)</string>
+    <string name="desktop_version">Desktop version</string>
+    <string name="search_engine">Search engine</string>
+    <string name="clear_history">Clear history</string>
+    <string name="about">About</string>
+    <string name="fav_added">Added to favorites</string>
+    <string name="fav_add_hint">Open a page to add it to favorites</string>
+    <string name="fav_empty_hint">No favorites yet: use ⋮ › Add to favorites</string>
+    <string name="favorites_title">⭐ Favorites (long-press to remove)</string>
+    <string name="close">Close</string>
+    <string name="history_empty">History is empty</string>
+    <string name="history_title">🕘 History</string>
+    <string name="history_cleared">History cleared</string>
+    <string name="engine_title">Search engine</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">Version 1.0\n\nThe browser with a 90s look and today\'s engine.</string>
+    <string name="ok">OK</string>
+    <string name="desktop_on">Desktop version on</string>
+    <string name="desktop_off">Mobile version on</string>
+    <string name="tm_on">Time Machine on: sites open as they looked in 1999</string>
+    <string name="tm_off">Time Machine off</string>
+    <string name="download_started">Download: %1$s</string>
+    <string name="download_failed">Download failed</string>
+    <string name="popup_blocked">Pop-up blocked</string>
+    <string name="no_app_for_link">No app can open this link</string>
+    <string name="share_chooser_title">Share</string>
+    <string name="new_tab_title">New tab</string>
+    <string name="status_done_placeholder">Done</string>
+    <string name="status_opening">Opening %1$s…</string>
+    <string name="home_title">Home page</string>
 </resources>
