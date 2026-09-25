@@ -55,8 +55,8 @@ h1{margin:0;font:normal 28px/1.1 "Trebuchet MS",Verdana,sans-serif;color:var(--b
   <div class="search">
     <div class="cats" id="cats"></div>
     <form id="f" autocomplete="off">
-      <input type="text" id="q" placeholder="Cosa cerchi oggi?" autocapitalize="off" autocorrect="off" aria-label="Cerca">
-      <button class="go" type="submit">Cerca</button>
+      <input type="text" id="q"  autocapitalize="off" autocorrect="off" aria-label="Cerca">
+      <button class="go" type="submit"></button>
     </form>
   </div>
 </div>
@@ -66,17 +66,20 @@ h1{margin:0;font:normal 28px/1.1 "Trebuchet MS",Verdana,sans-serif;color:var(--b
   <div class="tabs" id="tabs"></div>
   <div class="tiles" id="tiles"></div>
   <div class="hero">
-    <h2>Torna al 1999</h2>
-    <p>Con la Macchina del tempo ogni sito si apre com'era nel 1999, grazie all'Internet Archive.</p>
+    <h2></h2>
+    <p></p>
     <a class="btn raised" id="tm" href="eol://tm"></a>
   </div>
-  <div class="box raised"><h3>Ora esatta</h3><div class="lcd" id="lcd">00:00:00</div></div>
-  <div class="box raised"><h3>Visitatori</h3><div class="lcd" id="visits">000000</div></div>
-  <div class="box raised"><h3>I tuoi preferiti</h3><div id="favs"></div></div>
+  <div class="box raised"><h3></h3><div class="lcd" id="lcd">00:00:00</div></div>
+  <div class="box raised"><h3></h3><div class="lcd" id="visits">000000</div></div>
+  <div class="box raised"><h3></h3><div id="favs"></div></div>
 </main>
-<div class="mar"><span>★ Benvenuto su EOL Explorer ★ Il browser che naviga come nel 1999, ma va veloce come oggi ★ Sito in costruzione 🚧 ★</span></div>
+<div class="mar"><span></span></div>
 
 <script>
+window.EOL_H = {"it": {"home_search_placeholder": "Cosa cerchi oggi?", "home_search_btn": "Cerca", "home_cat_web": "Web", "home_cat_images": "Immagini", "home_cat_video": "Video", "home_cat_news": "Notizie", "home_cat_maps": "Mappe", "home_tab_explore": "Esplora", "home_tab_retro": "Retro", "home_tab_fun": "Svago", "home_tab_tools": "Strumenti", "home_hero_title": "Torna al 1999", "home_hero_text": "Con la Macchina del tempo ogni sito si apre com'era nel 1999, grazie all'Internet Archive.", "home_tm_on": "⏪ Macchina del tempo: ATTIVA (disattiva)", "home_tm_off": "⏪ Attiva la Macchina del tempo", "home_lcd_time": "Ora esatta", "home_lcd_visits": "Visitatori", "home_favs_title": "I tuoi preferiti", "home_favs_empty": "Ancora nessuno.", "home_marquee": "★ Benvenuto su EOL Explorer ★ Il browser che naviga come nel 1999, ma va veloce come oggi ★ Risoluzione consigliata 800x600 (ma va bene anche 4K) ★ Sito in costruzione 🚧 ★", "greet_morning": "Buongiorno", "greet_afternoon": "Buon pomeriggio", "greet_evening": "Buonasera"}, "en": {"home_search_placeholder": "What are you looking for today?", "home_search_btn": "Search", "home_cat_web": "Web", "home_cat_images": "Images", "home_cat_video": "Video", "home_cat_news": "News", "home_cat_maps": "Maps", "home_tab_explore": "Explore", "home_tab_retro": "Retro", "home_tab_fun": "Fun", "home_tab_tools": "Tools", "home_hero_title": "Back to 1999", "home_hero_text": "With the Time Machine, every site opens as it looked in 1999, thanks to the Internet Archive.", "home_tm_on": "⏪ Time Machine: ON (turn off)", "home_tm_off": "⏪ Turn on the Time Machine", "home_lcd_time": "Current time", "home_lcd_visits": "Visitors", "home_favs_title": "Your favorites", "home_favs_empty": "None yet.", "home_marquee": "★ Welcome to EOL Explorer ★ The browser that browses like 1999, but runs as fast as today ★ Recommended resolution 800x600 (but 4K works fine too) ★ Site under construction 🚧 ★", "greet_morning": "Good morning", "greet_afternoon": "Good afternoon", "greet_evening": "Good evening"}, "es": {"home_search_placeholder": "¿Qué buscas hoy?", "home_search_btn": "Buscar", "home_cat_web": "Web", "home_cat_images": "Imágenes", "home_cat_video": "Vídeo", "home_cat_news": "Noticias", "home_cat_maps": "Mapas", "home_tab_explore": "Explorar", "home_tab_retro": "Retro", "home_tab_fun": "Ocio", "home_tab_tools": "Herramientas", "home_hero_title": "Vuelve a 1999", "home_hero_text": "Con la Máquina del tiempo, cada sitio se abre como era en 1999, gracias a Internet Archive.", "home_tm_on": "⏪ Máquina del tiempo: ACTIVADA (desactivar)", "home_tm_off": "⏪ Activar la Máquina del tiempo", "home_lcd_time": "Hora actual", "home_lcd_visits": "Visitantes", "home_favs_title": "Tus favoritos", "home_favs_empty": "Todavía ninguno.", "home_marquee": "★ Bienvenido a EOL Explorer ★ El navegador que navega como en 1999, pero va rápido como hoy ★ Resolución recomendada 800x600 (pero 4K también funciona) ★ Sitio en construcción 🚧 ★", "greet_morning": "Buenos días", "greet_afternoon": "Buenas tardes", "greet_evening": "Buenas noches"}, "fr": {"home_search_placeholder": "Que cherchez-vous aujourd'hui ?", "home_search_btn": "Rechercher", "home_cat_web": "Web", "home_cat_images": "Images", "home_cat_video": "Vidéos", "home_cat_news": "Actualités", "home_cat_maps": "Cartes", "home_tab_explore": "Explorer", "home_tab_retro": "Rétro", "home_tab_fun": "Loisirs", "home_tab_tools": "Outils", "home_hero_title": "Retour en 1999", "home_hero_text": "Avec la Machine à remonter le temps, chaque site s'ouvre comme en 1999, grâce à Internet Archive.", "home_tm_on": "⏪ Machine à remonter le temps : ACTIVÉE (désactiver)", "home_tm_off": "⏪ Activer la Machine à remonter le temps", "home_lcd_time": "Heure actuelle", "home_lcd_visits": "Visiteurs", "home_favs_title": "Vos favoris", "home_favs_empty": "Aucun pour l'instant.", "home_marquee": "★ Bienvenue sur EOL Explorer ★ Le navigateur qui navigue comme en 1999, mais aussi vite qu'aujourd'hui ★ Résolution recommandée 800x600 (mais la 4K fonctionne aussi) ★ Site en construction 🚧 ★", "greet_morning": "Bonjour", "greet_afternoon": "Bon après-midi", "greet_evening": "Bonsoir"}, "de": {"home_search_placeholder": "Wonach suchst du heute?", "home_search_btn": "Suchen", "home_cat_web": "Web", "home_cat_images": "Bilder", "home_cat_video": "Videos", "home_cat_news": "News", "home_cat_maps": "Karten", "home_tab_explore": "Entdecken", "home_tab_retro": "Retro", "home_tab_fun": "Freizeit", "home_tab_tools": "Werkzeuge", "home_hero_title": "Zurück ins Jahr 1999", "home_hero_text": "Mit der Zeitmaschine öffnet sich jede Seite so, wie sie 1999 aussah – dank des Internet Archive.", "home_tm_on": "⏪ Zeitmaschine: AN (ausschalten)", "home_tm_off": "⏪ Zeitmaschine aktivieren", "home_lcd_time": "Aktuelle Uhrzeit", "home_lcd_visits": "Besucher", "home_favs_title": "Deine Favoriten", "home_favs_empty": "Noch keine.", "home_marquee": "★ Willkommen bei EOL Explorer ★ Der Browser, der wie 1999 surft, aber so schnell wie heute läuft ★ Empfohlene Auflösung 800x600 (aber auch 4K funktioniert) ★ Seite im Aufbau 🚧 ★", "greet_morning": "Guten Morgen", "greet_afternoon": "Guten Tag", "greet_evening": "Guten Abend"}, "pt": {"home_search_placeholder": "O que você procura hoje?", "home_search_btn": "Pesquisar", "home_cat_web": "Web", "home_cat_images": "Imagens", "home_cat_video": "Vídeo", "home_cat_news": "Notícias", "home_cat_maps": "Mapas", "home_tab_explore": "Explorar", "home_tab_retro": "Retrô", "home_tab_fun": "Diversão", "home_tab_tools": "Ferramentas", "home_hero_title": "Volte a 1999", "home_hero_text": "Com a Máquina do tempo, cada site abre como era em 1999, graças ao Internet Archive.", "home_tm_on": "⏪ Máquina do tempo: ATIVA (desativar)", "home_tm_off": "⏪ Ativar a Máquina do tempo", "home_lcd_time": "Hora atual", "home_lcd_visits": "Visitantes", "home_favs_title": "Seus favoritos", "home_favs_empty": "Ainda nenhum.", "home_marquee": "★ Bem-vindo ao EOL Explorer ★ O navegador que navega como em 1999, mas é rápido como hoje ★ Resolução recomendada 800x600 (mas 4K também funciona) ★ Site em construção 🚧 ★", "greet_morning": "Bom dia", "greet_afternoon": "Boa tarde", "greet_evening": "Boa noite"}, "ru": {"home_search_placeholder": "Что вы ищете сегодня?", "home_search_btn": "Найти", "home_cat_web": "Веб", "home_cat_images": "Картинки", "home_cat_video": "Видео", "home_cat_news": "Новости", "home_cat_maps": "Карты", "home_tab_explore": "Обзор", "home_tab_retro": "Ретро", "home_tab_fun": "Развлечения", "home_tab_tools": "Инструменты", "home_hero_title": "Назад в 1999-й", "home_hero_text": "С Машиной времени любой сайт открывается таким, каким он был в 1999 году, благодаря Internet Archive.", "home_tm_on": "⏪ Машина времени: ВКЛ (выключить)", "home_tm_off": "⏪ Включить Машину времени", "home_lcd_time": "Точное время", "home_lcd_visits": "Посетители", "home_favs_title": "Ваше избранное", "home_favs_empty": "Пока пусто.", "home_marquee": "★ Добро пожаловать в EOL Explorer ★ Браузер, который выглядит как в 1999-м, а работает быстро, как сегодня ★ Рекомендуемое разрешение 800x600 (но и 4K подойдёт) ★ Сайт в разработке 🚧 ★", "greet_morning": "Доброе утро", "greet_afternoon": "Добрый день", "greet_evening": "Добрый вечер"}, "zh": {"home_search_placeholder": "今天想找什么？", "home_search_btn": "搜索", "home_cat_web": "网页", "home_cat_images": "图片", "home_cat_video": "视频", "home_cat_news": "新闻", "home_cat_maps": "地图", "home_tab_explore": "探索", "home_tab_retro": "复古", "home_tab_fun": "娱乐", "home_tab_tools": "工具", "home_hero_title": "回到 1999 年", "home_hero_text": "借助时光机和互联网档案馆，每个网站都会以 1999 年的样子打开。", "home_tm_on": "⏪ 时光机：已开启（关闭）", "home_tm_off": "⏪ 开启时光机", "home_lcd_time": "当前时间", "home_lcd_visits": "访客数", "home_favs_title": "你的收藏", "home_favs_empty": "暂无。", "home_marquee": "★ 欢迎使用 EOL Explorer ★ 拥有 1999 年的界面，却有今天的速度 ★ 推荐分辨率 800x600（4K 也没问题）★ 网站建设中 🚧 ★", "greet_morning": "早上好", "greet_afternoon": "下午好", "greet_evening": "晚上好"}, "ja": {"home_search_placeholder": "今日は何をお探しですか？", "home_search_btn": "検索", "home_cat_web": "ウェブ", "home_cat_images": "画像", "home_cat_video": "動画", "home_cat_news": "ニュース", "home_cat_maps": "地図", "home_tab_explore": "探索", "home_tab_retro": "レトロ", "home_tab_fun": "エンタメ", "home_tab_tools": "ツール", "home_hero_title": "1999年へ戻る", "home_hero_text": "タイムマシンを使うと、Internet Archiveのおかげでどのサイトも1999年当時の姿で開きます。", "home_tm_on": "⏪ タイムマシン：ON（オフにする）", "home_tm_off": "⏪ タイムマシンをオンにする", "home_lcd_time": "現在時刻", "home_lcd_visits": "訪問者数", "home_favs_title": "お気に入り", "home_favs_empty": "まだありません。", "home_marquee": "★ EOL Explorer へようこそ ★ 1999年のように閲覧できて、今日のように高速 ★ 推奨解像度 800x600（4KでもOK）★ サイトは建設中です 🚧 ★", "greet_morning": "おはようございます", "greet_afternoon": "こんにちは", "greet_evening": "こんばんは"}, "ar": {"home_search_placeholder": "عمّ تبحث اليوم؟", "home_search_btn": "بحث", "home_cat_web": "الويب", "home_cat_images": "صور", "home_cat_video": "فيديو", "home_cat_news": "أخبار", "home_cat_maps": "خرائط", "home_tab_explore": "استكشاف", "home_tab_retro": "قديم", "home_tab_fun": "ترفيه", "home_tab_tools": "أدوات", "home_hero_title": "عد إلى 1999", "home_hero_text": "باستخدام آلة الزمن، يُفتح كل موقع كما كان في عام 1999 بفضل أرشيف الإنترنت.", "home_tm_on": "⏪ آلة الزمن: مفعّلة (إيقاف)", "home_tm_off": "⏪ تفعيل آلة الزمن", "home_lcd_time": "الوقت الحالي", "home_lcd_visits": "الزوار", "home_favs_title": "مفضلتك", "home_favs_empty": "لا شيء بعد.", "home_marquee": "★ مرحبًا بك في EOL Explorer ★ متصفح يتصفح كما في 1999 لكنه سريع كاليوم ★ الدقة الموصى بها 800×600 (لكن 4K يعمل أيضًا) ★ الموقع قيد الإنشاء 🚧 ★", "greet_morning": "صباح الخير", "greet_afternoon": "مساء الخير", "greet_evening": "مساء الخير"}};
+window.EOL_H_RTL = ["ar"];
+
 (function(){
   var ENG = {
     google:'https://www.google.com/search?q=',
@@ -85,14 +88,27 @@ h1{margin:0;font:normal 28px/1.1 "Trebuchet MS",Verdana,sans-serif;color:var(--b
     news:'https://www.google.com/search?tbm=nws&q=',
     maps:'https://www.google.com/maps/search/'
   };
-  var CATS = [['Web','google'],['Immagini','images'],['Video','video'],['Notizie','news'],['Mappe','maps']];
-  var TILES = {
-    'Esplora':[['🔎','Google','https://www.google.com/'],['▶️','YouTube','https://www.youtube.com/'],['📚','Wikipedia','https://it.wikipedia.org/'],['🗺️','Mappe','https://www.openstreetmap.org/']],
-    'Retro':[['🕰️','Wayback Machine','https://web.archive.org/'],['🕹️','Internet Arcade','https://archive.org/details/internetarcade'],['🏚️','Neocities','https://neocities.org/browse'],['🏀','Space Jam 1996','https://www.spacejam.com/1996/']],
-    'Svago':[['📻','Radio Garden','https://radio.garden/'],['🎬','IMDb','https://www.imdb.com/'],['👾','Reddit','https://www.reddit.com/'],['🎮','Twitch','https://www.twitch.tv/']],
-    'Strumenti':[['🌍','Traduttore','https://translate.google.com/'],['✉️','Gmail','https://mail.google.com/'],['💬','WhatsApp Web','https://web.whatsapp.com/'],['📖','Wikizionario','https://it.wiktionary.org/']]
-  };
-  var cat = 'google', tab = 'Esplora', state = {favs:[], tm:false, visits:0};
+  function detectLang(){
+    var nav = (navigator.languages || [navigator.language || 'en']).map(function(l){ return l.toLowerCase(); });
+    for (var i = 0; i < nav.length; i++){
+      var base = nav[i].split('-')[0];
+      if (window.EOL_H[base]) return base;
+    }
+    return 'en';
+  }
+  var LANG = detectLang();
+  document.documentElement.lang = LANG;
+  if (window.EOL_H_RTL.indexOf(LANG) >= 0) document.documentElement.dir = 'rtl';
+  function tr(key){ var d = window.EOL_H[LANG] || window.EOL_H.en; return (d && d[key]) || (window.EOL_H.en && window.EOL_H.en[key]) || key; }
+
+  var CATS = [['home_cat_web','google'],['home_cat_images','images'],['home_cat_video','video'],['home_cat_news','news'],['home_cat_maps','maps']];
+  var TILES = {};
+  TILES[tr('home_tab_explore')] = [['🔎','Google','https://www.google.com/'],['▶️','YouTube','https://www.youtube.com/'],['📚','Wikipedia','https://it.wikipedia.org/'],['🗺️','Mappe','https://www.openstreetmap.org/']];
+  TILES[tr('home_tab_retro')] = [['🕰️','Wayback Machine','https://web.archive.org/'],['🕹️','Internet Arcade','https://archive.org/details/internetarcade'],['🏚️','Neocities','https://neocities.org/browse'],['🏀','Space Jam 1996','https://www.spacejam.com/1996/']];
+  TILES[tr('home_tab_fun')] = [['📻','Radio Garden','https://radio.garden/'],['🎬','IMDb','https://www.imdb.com/'],['👾','Reddit','https://www.reddit.com/'],['🎮','Twitch','https://www.twitch.tv/']];
+  TILES[tr('home_tab_tools')] = [['🌍','Traduttore','https://translate.google.com/'],['✉️','Gmail','https://mail.google.com/'],['💬','WhatsApp Web','https://web.whatsapp.com/'],['📖','Wikizionario','https://it.wiktionary.org/']];
+
+  var cat = 'google', tab = tr('home_tab_explore'), state = {favs:[], tm:false, visits:0};
   var $ = function(id){ return document.getElementById(id); };
 
   function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
@@ -100,7 +116,7 @@ h1{margin:0;font:normal 28px/1.1 "Trebuchet MS",Verdana,sans-serif;color:var(--b
   function render(){
     var c = $('cats'); c.textContent = '';
     CATS.forEach(function(x){
-      var b = el('button', x[1] === cat ? 'on' : '', x[0]); b.type = 'button';
+      var b = el('button', x[1] === cat ? 'on' : '', tr(x[0])); b.type = 'button';
       b.onclick = function(){ cat = x[1]; render(); };
       c.appendChild(b);
     });
@@ -117,12 +133,20 @@ h1{margin:0;font:normal 28px/1.1 "Trebuchet MS",Verdana,sans-serif;color:var(--b
       tl.appendChild(a);
     });
     var f = $('favs'); f.textContent = '';
-    if (!state.favs.length) f.textContent = 'Ancora nessuno.';
+    if (!state.favs.length) f.textContent = tr('home_favs_empty');
     state.favs.slice(0, 8).forEach(function(x){
       var a = el('a', 'fav', '⭐ ' + x.t); a.href = x.u; f.appendChild(a);
     });
-    $('tm').textContent = state.tm ? '⏪ Macchina del tempo: ATTIVA (tocca per disattivare)' : '⏪ Attiva la Macchina del tempo';
+    $('tm').textContent = state.tm ? tr('home_tm_on') : tr('home_tm_off');
     $('visits').textContent = String(state.visits).padStart(6, '0');
+    $('q').placeholder = tr('home_search_placeholder');
+    document.querySelector('.go').textContent = tr('home_search_btn');
+    document.querySelector('.hero h2').textContent = tr('home_hero_title');
+    document.querySelector('.hero p').textContent = tr('home_hero_text');
+    document.querySelectorAll('.box h3')[0].textContent = tr('home_lcd_time');
+    document.querySelectorAll('.box h3')[1].textContent = tr('home_lcd_visits');
+    document.querySelectorAll('.box h3')[2].textContent = tr('home_favs_title');
+    document.querySelector('.mar span').textContent = tr('home_marquee');
   }
 
   $('f').onsubmit = function(e){
@@ -134,9 +158,9 @@ h1{margin:0;font:normal 28px/1.1 "Trebuchet MS",Verdana,sans-serif;color:var(--b
   };
 
   var h = new Date().getHours();
-  $('greet').textContent = h < 12 ? 'Buongiorno' : (h < 18 ? 'Buon pomeriggio' : 'Buonasera');
-  $('date').textContent = new Date().toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
-  setInterval(function(){ $('lcd').textContent = new Date().toLocaleTimeString('it-IT'); }, 1000);
+  $('greet').textContent = h < 12 ? tr('greet_morning') : (h < 18 ? tr('greet_afternoon') : tr('greet_evening'));
+  $('date').textContent = new Date().toLocaleDateString(LANG, {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  setInterval(function(){ $('lcd').textContent = new Date().toLocaleTimeString(LANG); }, 1000);
 
   // chiamata dall'app con preferiti, stato della Macchina del tempo e contatore visite
   window.eolInit = function(d){
