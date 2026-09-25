@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">Scrivi un indirizzo o cerca…</string>
+    <string name="go">Vai</string>
+    <string name="new_tab">Nuova scheda</string>
+    <string name="close_tab">Chiudi scheda</string>
+    <string name="add_favorite">Aggiungi ai preferiti</string>
+    <string name="favorites">Preferiti</string>
+    <string name="history">Cronologia</string>
+    <string name="share_page">Condividi pagina</string>
+    <string name="time_machine">Macchina del tempo (web 1999)</string>
+    <string name="desktop_version">Versione desktop</string>
+    <string name="search_engine">Motore di ricerca</string>
+    <string name="clear_history">Cancella cronologia</string>
+    <string name="about">Informazioni</string>
+    <string name="fav_added">Aggiunto ai preferiti</string>
+    <string name="fav_add_hint">Apri una pagina per aggiungerla ai preferiti</string>
+    <string name="fav_empty_hint">Nessun preferito: usa ⋮ › Aggiungi ai preferiti</string>
+    <string name="favorites_title">⭐ Preferiti (tocco lungo per rimuovere)</string>
+    <string name="close">Chiudi</string>
+    <string name="history_empty">La cronologia è vuota</string>
+    <string name="history_title">🕘 Cronologia</string>
+    <string name="history_cleared">Cronologia cancellata</string>
+    <string name="engine_title">Motore di ricerca</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">Versione 1.0\n\nIl browser con l\'aspetto degli anni \'90 e il motore di oggi.</string>
+    <string name="ok">OK</string>
+    <string name="desktop_on">Versione desktop attiva</string>
+    <string name="desktop_off">Versione mobile attiva</string>
+    <string name="tm_on">Macchina del tempo attiva: i siti si aprono come nel 1999</string>
+    <string name="tm_off">Macchina del tempo disattivata</string>
+    <string name="download_started">Download: %1$s</string>
+    <string name="download_failed">Download non riuscito</string>
+    <string name="popup_blocked">Pop-up bloccato</string>
+    <string name="no_app_for_link">Nessuna app può aprire questo link</string>
+    <string name="share_chooser_title">Condividi</string>
+    <string name="new_tab_title">Nuova scheda</string>
+    <string name="status_done_placeholder">Fatto</string>
+    <string name="status_opening">Apertura di %1$s…</string>
+    <string name="home_title">Pagina iniziale</string>
+</resources>
