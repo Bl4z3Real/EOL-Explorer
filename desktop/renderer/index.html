@@ -17,30 +17,29 @@
   <div id="tabs"></div>
 
   <div id="bar">
-    <button class="btn flat nb" id="back" title="Indietro (Alt+←)"><b>◄</b><small>Indietro</small></button>
-    <button class="btn flat nb" id="fwd" title="Avanti (Alt+→)"><b>►</b><small>Avanti</small></button>
-    <button class="btn flat nb" id="stop" title="Interrompi"><b>✖</b><small>Stop</small></button>
-    <button class="btn flat nb" id="reload" title="Aggiorna (F5)"><b>↻</b><small>Aggiorna</small></button>
-    <button class="btn flat nb" id="homeBtn" title="Pagina iniziale (Alt+Home)"><b>🏠</b><small>Home</small></button>
-    <button class="btn flat nb" id="panelBtn" title="Preferiti e cronologia"><b>⭐</b><small>Preferiti</small></button>
+    <button class="btn flat nb" id="back"><b>◄</b><small id="backL"></small></button>
+    <button class="btn flat nb" id="fwd"><b>►</b><small id="fwdL"></small></button>
+    <button class="btn flat nb" id="stop"><b>✖</b><small id="stopL"></small></button>
+    <button class="btn flat nb" id="reload"><b>↻</b><small id="reloadL"></small></button>
+    <button class="btn flat nb" id="homeBtn"><b>🏠</b><small id="homeL"></small></button>
+    <button class="btn flat nb" id="panelBtn"><b>⭐</b><small id="panelL"></small></button>
     <div class="sep"></div>
     <form id="addr" autocomplete="off">
-      <label for="url"><u>I</u>ndirizzo</label>
-      <input id="url" class="sunk" type="text" spellcheck="false" placeholder="Scrivi un indirizzo o cerca…">
-      <button class="btn" type="submit">Vai</button>
+      <input id="url" class="sunk" type="text" spellcheck="false">
+      <button class="btn" type="submit" id="goBtn"></button>
     </form>
     <form id="sbox" autocomplete="off">
-      <input id="sq" class="sunk" type="text" placeholder="Cerca" aria-label="Cerca">
-      <button class="btn flat" type="submit" title="Cerca">🔍</button>
+      <input id="sq" class="sunk" type="text">
+      <button class="btn flat" type="submit" id="sqBtn">🔍</button>
     </form>
-    <div id="throb" class="raised" title="Caricamento"><span>🌐</span></div>
+    <div id="throb" class="raised"><span>🌐</span></div>
   </div>
 
   <div id="main">
     <div id="rail">
-      <button class="btn rb c1" data-p="fav">Preferiti</button>
-      <button class="btn rb c2" data-p="hist">Cronologia</button>
-      <button class="btn rb c3" data-p="chan">Canali</button>
+      <button class="btn rb c1" data-p="fav" id="railFav"></button>
+      <button class="btn rb c2" data-p="hist" id="railHist"></button>
+      <button class="btn rb c3" data-p="chan" id="railChan"></button>
     </div>
     <div id="panel">
       <div id="phead"><span id="ptitle"></span><button class="btn tb" id="pclose">✕</button></div>
@@ -48,19 +47,19 @@
     </div>
     <div id="viewcol" class="sunk">
       <div id="find">
-        <label for="fq">Trova:</label>
+        <label for="fq" id="findLabel"></label>
         <input id="fq" class="sunk" type="text">
         <span id="fcount"></span>
-        <button class="btn" id="fprev" title="Precedente">▲</button>
-        <button class="btn" id="fnext" title="Successivo">▼</button>
-        <button class="btn" id="fclose" title="Chiudi">✕</button>
+        <button class="btn" id="fprev">▲</button>
+        <button class="btn" id="fnext">▼</button>
+        <button class="btn" id="fclose">✕</button>
       </div>
       <div id="stage">
         <div id="err">
           <div class="dlgbox raised">
-            <div class="dt">Impossibile aprire la pagina</div>
+            <div class="dt" id="errTitle"></div>
             <div class="db"><p id="errmsg"></p><p id="errurl"></p></div>
-            <div class="df"><button class="btn" id="errretry">Riprova</button><button class="btn" id="errhome">Pagina iniziale</button></div>
+            <div class="df"><button class="btn" id="errretry"></button><button class="btn" id="errhome"></button></div>
           </div>
         </div>
       </div>
@@ -68,9 +67,9 @@
   </div>
 
   <div id="status">
-    <div id="stat">Fatto</div>
+    <div id="stat"></div>
     <div id="zoomst">100%</div>
-    <div id="sec">🏠 Locale</div>
+    <div id="sec"></div>
     <div id="clock">--:--</div>
   </div>
 </div>
@@ -84,8 +83,8 @@
     <div class="h-search">
       <div class="h-cats" id="cats"></div>
       <form id="hform" autocomplete="off">
-        <input id="hq" type="text" placeholder="Cosa cerchi oggi?" aria-label="Cerca">
-        <button class="btn" type="submit">Cerca</button>
+        <input id="hq" type="text">
+        <button class="btn" type="submit" id="hSearchBtn"></button>
       </form>
     </div>
   </div>
@@ -96,21 +95,23 @@
       <div class="h-tabs" id="htabs"></div>
       <div class="h-panel sunk" id="htiles"></div>
       <div class="h-hero">
-        <h2>Torna al 1999</h2>
-        <p>Con la Macchina del tempo ogni sito si apre com'era nel 1999, grazie all'Internet Archive.</p>
+        <h2 id="heroTitle"></h2>
+        <p id="heroText"></p>
         <button class="btn" id="tmBtn"></button>
       </div>
     </div>
     <aside class="h-side">
-      <div class="box raised"><h3>Ora esatta</h3><div class="lcd" id="lcd">00:00:00</div></div>
-      <div class="box raised"><h3>Visitatori</h3><div class="lcd" id="visits">000000</div></div>
-      <div class="box raised"><h3>I tuoi preferiti</h3><div id="hfavs"></div></div>
+      <div class="box raised"><h3 id="lcdTimeLbl"></h3><div class="lcd" id="lcd">00:00:00</div></div>
+      <div class="box raised"><h3 id="lcdVisitsLbl"></h3><div class="lcd" id="visits">000000</div></div>
+      <div class="box raised"><h3 id="favsLbl"></h3><div id="hfavs"></div></div>
     </aside>
   </div>
-  <div class="h-mar"><span>★ Benvenuto su EOL Explorer ★ Il browser che naviga come nel 1999, ma va veloce come oggi ★ Risoluzione consigliata 800x600 (ma va bene anche 4K) ★ Sito in costruzione 🚧 ★</span></div>
+  <div class="h-mar"><span id="marquee"></span></div>
 </div>
 </template>
 
+<script src="strings.js"></script>
+<script src="i18n.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
