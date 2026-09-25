@@ -48,7 +48,7 @@ class MainActivity : Activity() {
     data class Item(val t: String, val u: String)
 
     inner class Tab(val web: WebView) {
-        var title = "Nuova scheda"
+        var title = ""
         var url = ""
         var progress = 100
         var loading = false
@@ -275,7 +275,7 @@ class MainActivity : Activity() {
         urlBox.setSingleLine(true)
         urlBox.textSize = 14f
         urlBox.setTextColor(Color.BLACK)
-        urlBox.hint = "Scrivi un indirizzo o cerca…"
+        urlBox.hint = getString(R.string.url_placeholder)
         urlBox.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_URI
         urlBox.imeOptions = EditorInfo.IME_ACTION_GO
         urlBox.setSelectAllOnFocus(true)
@@ -292,7 +292,7 @@ class MainActivity : Activity() {
             }
         }
         addr.addView(urlBox, LinearLayout.LayoutParams(0, dp(42), 1f))
-        val go = button("Vai") { submit() }
+        val go = button(getString(R.string.go)) { submit() }
         go.textSize = 14f
         val golp = LinearLayout.LayoutParams(wrap, dp(42))
         golp.setMargins(dp(6), 0, 0, 0)
@@ -311,7 +311,7 @@ class MainActivity : Activity() {
         statusView.setTextColor(Color.BLACK)
         statusView.maxLines = 1
         statusView.ellipsize = TextUtils.TruncateAt.END
-        statusView.text = "Fatto"
+        statusView.text = getString(R.string.status_done_placeholder)
         statusView.setPadding(dp(8), dp(3), dp(8), dp(3))
         statusView.background = BevelDrawable(Pal.FACE, true, dp(1).toFloat())
         main.addView(statusView, LinearLayout.LayoutParams(match, wrap))
@@ -330,8 +330,8 @@ class MainActivity : Activity() {
     }
 
     private fun titleOf(t: Tab): String = when {
-        t.url.isEmpty() -> "Nuova scheda"
-        t.url.startsWith(HOME) -> "Pagina iniziale"
+        t.url.isEmpty() -> getString(R.string.new_tab_title)
+        t.url.startsWith(HOME) -> getString(R.string.home_title)
         else -> t.title
     }
 
@@ -517,7 +517,7 @@ class MainActivity : Activity() {
                     if (!url.startsWith(HOME)) t.title = hostOf(url)
                 }
                 if (t === cur) {
-                    status("Apertura di " + hostOf(t.url) + "…")
+                    status(getString(R.string.status_opening, hostOf(t.url)))
                     refreshUi()
                 }
             }
@@ -528,7 +528,7 @@ class MainActivity : Activity() {
                 if (url != null) t.url = url
                 if (t.url.startsWith(HOME)) injectHome(t)
                 if (t === cur) {
-                    status("Fatto")
+                    status(getString(R.string.status_done_placeholder))
                     refreshUi()
                 } else {
                     refreshTabs()
@@ -561,7 +561,7 @@ class MainActivity : Activity() {
             ): Boolean {
                 if (resultMsg == null) return false
                 if (!isUserGesture) {
-                    Toast.makeText(this@MainActivity, "Pop-up bloccato", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, getString(R.string.popup_blocked), Toast.LENGTH_SHORT).show()
                     return false
                 }
                 val transport = resultMsg.obj as? WebView.WebViewTransport ?: return false
@@ -638,7 +638,7 @@ class MainActivity : Activity() {
             i.selector = null
             startActivity(i)
         } catch (e: Exception) {
-            Toast.makeText(this, "Nessuna app può aprire questo link", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.no_app_for_link), Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -652,9 +652,9 @@ class MainActivity : Activity() {
             r.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
             r.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, name)
             (getSystemService(DOWNLOAD_SERVICE) as DownloadManager).enqueue(r)
-            Toast.makeText(this, "Download: $name", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.download_started, name), Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
-            Toast.makeText(this, "Download non riuscito", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.download_failed), Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -672,7 +672,7 @@ class MainActivity : Activity() {
         prefs.edit().putBoolean("tm", tm).apply()
         Toast.makeText(
             this,
-            if (tm) "Macchina del tempo attiva: i siti si aprono come nel 1999" else "Macchina del tempo disattivata",
+            if (tm) getString(R.string.tm_on) else getString(R.string.tm_off),
             Toast.LENGTH_SHORT
         ).show()
         if (cur.url.startsWith(HOME)) injectHome(cur)
@@ -682,28 +682,28 @@ class MainActivity : Activity() {
 
     private fun addFav() {
         if (cur.url.isEmpty() || cur.url.startsWith(HOME)) {
-            Toast.makeText(this, "Apri una pagina per aggiungerla ai preferiti", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.fav_add_hint), Toast.LENGTH_SHORT).show()
             return
         }
         if (favs.none { it.u == cur.url }) favs.add(Item(cur.title, cur.url))
         writeList("favs", favs)
-        Toast.makeText(this, "Aggiunto ai preferiti", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.fav_added), Toast.LENGTH_SHORT).show()
     }
 
     private fun showFavs() {
         if (favs.isEmpty()) {
-            Toast.makeText(this, "Nessun preferito: usa ⋮ › Aggiungi ai preferiti", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.fav_empty_hint), Toast.LENGTH_LONG).show()
             return
         }
         val list = favs.toList()
         val names = list.map { it.t }.toTypedArray()
         val d = AlertDialog.Builder(this)
-            .setTitle("⭐ Preferiti (tocco lungo per rimuovere)")
+            .setTitle(getString(R.string.favorites_title))
             .setItems(names) { dlg, i ->
                 dlg.dismiss()
                 load(cur, list[i].u)
             }
-            .setNegativeButton("Chiudi", null)
+            .setNegativeButton(getString(R.string.close), null)
             .create()
         d.show()
         d.listView.setOnItemLongClickListener { _, _, pos, _ ->
@@ -717,18 +717,18 @@ class MainActivity : Activity() {
 
     private fun showHistory() {
         if (history.isEmpty()) {
-            Toast.makeText(this, "La cronologia è vuota", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.history_empty), Toast.LENGTH_SHORT).show()
             return
         }
         val list = history.toList()
         val names = list.map { it.t }.toTypedArray()
         AlertDialog.Builder(this)
-            .setTitle("🕘 Cronologia")
+            .setTitle(getString(R.string.history_title))
             .setItems(names) { dlg, i ->
                 dlg.dismiss()
                 load(cur, list[i].u)
             }
-            .setNegativeButton("Chiudi", null)
+            .setNegativeButton(getString(R.string.close), null)
             .show()
     }
 
@@ -736,7 +736,7 @@ class MainActivity : Activity() {
         val keys = engines.keys.toList()
         val names = keys.map { engines[it]?.first ?: it }.toTypedArray()
         AlertDialog.Builder(this)
-            .setTitle("Motore di ricerca")
+            .setTitle(getString(R.string.engine_title))
             .setSingleChoiceItems(names, keys.indexOf(engine)) { d, which ->
                 engine = keys[which]
                 prefs.edit().putString("engine", engine).apply()
@@ -748,21 +748,21 @@ class MainActivity : Activity() {
     private fun showMenu(anchor: View) {
         val pm = PopupMenu(this, anchor)
         val m = pm.menu
-        m.add(0, 1, 0, "Nuova scheda")
-        m.add(0, 2, 0, "Chiudi scheda")
-        m.add(0, 3, 0, "Aggiungi ai preferiti")
-        m.add(0, 4, 0, "Preferiti")
-        m.add(0, 5, 0, "Cronologia")
-        m.add(0, 6, 0, "Condividi pagina")
-        val tmItem = m.add(0, 7, 0, "Macchina del tempo (web 1999)")
+        m.add(0, 1, 0, getString(R.string.new_tab))
+        m.add(0, 2, 0, getString(R.string.close_tab))
+        m.add(0, 3, 0, getString(R.string.add_favorite))
+        m.add(0, 4, 0, getString(R.string.favorites))
+        m.add(0, 5, 0, getString(R.string.history))
+        m.add(0, 6, 0, getString(R.string.share_page))
+        val tmItem = m.add(0, 7, 0, getString(R.string.time_machine))
         tmItem.isCheckable = true
         tmItem.isChecked = tm
-        val dtItem = m.add(0, 8, 0, "Versione desktop")
+        val dtItem = m.add(0, 8, 0, getString(R.string.desktop_version))
         dtItem.isCheckable = true
         dtItem.isChecked = desktop
-        m.add(0, 9, 0, "Motore di ricerca")
-        m.add(0, 10, 0, "Cancella cronologia")
-        m.add(0, 11, 0, "Informazioni")
+        m.add(0, 9, 0, getString(R.string.search_engine))
+        m.add(0, 10, 0, getString(R.string.clear_history))
+        m.add(0, 11, 0, getString(R.string.about))
         pm.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 1 -> newTab(HOME)
@@ -777,12 +777,12 @@ class MainActivity : Activity() {
                 10 -> {
                     history.clear()
                     writeList("hist", history)
-                    Toast.makeText(this, "Cronologia cancellata", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.history_cleared), Toast.LENGTH_SHORT).show()
                 }
                 11 -> AlertDialog.Builder(this)
-                    .setTitle("EOL Explorer")
-                    .setMessage("Versione 1.0\n\nIl browser con l'aspetto degli anni '90 e il motore di oggi.")
-                    .setPositiveButton("OK", null)
+                    .setTitle(getString(R.string.about_title))
+                    .setMessage(getString(R.string.about_message))
+                    .setPositiveButton(getString(R.string.ok), null)
                     .show()
             }
             true
@@ -795,7 +795,7 @@ class MainActivity : Activity() {
         val i = Intent(Intent.ACTION_SEND)
         i.type = "text/plain"
         i.putExtra(Intent.EXTRA_TEXT, cur.url)
-        startActivity(Intent.createChooser(i, "Condividi"))
+        startActivity(Intent.createChooser(i, getString(R.string.share_chooser_title)))
     }
 
     private fun toggleDesktop() {
@@ -803,7 +803,7 @@ class MainActivity : Activity() {
         prefs.edit().putBoolean("desktop", desktop).apply()
         for (t in tabs) t.web.settings.userAgentString = currentUA()
         if (!cur.url.startsWith(HOME)) cur.web.reload()
-        Toast.makeText(this, if (desktop) "Versione desktop attiva" else "Versione mobile attiva", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, if (desktop) getString(R.string.desktop_on) else getString(R.string.desktop_off), Toast.LENGTH_SHORT).show()
     }
 
     companion object {
