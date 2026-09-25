@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">Digite um endereço ou pesquise…</string>
+    <string name="go">Ir</string>
+    <string name="new_tab">Nova aba</string>
+    <string name="close_tab">Fechar aba</string>
+    <string name="add_favorite">Adicionar aos favoritos</string>
+    <string name="favorites">Favoritos</string>
+    <string name="history">Histórico</string>
+    <string name="share_page">Compartilhar página</string>
+    <string name="time_machine">Máquina do tempo (web de 1999)</string>
+    <string name="desktop_version">Versão para computador</string>
+    <string name="search_engine">Mecanismo de busca</string>
+    <string name="clear_history">Limpar histórico</string>
+    <string name="about">Sobre</string>
+    <string name="fav_added">Adicionado aos favoritos</string>
+    <string name="fav_add_hint">Abra uma página para adicioná-la aos favoritos</string>
+    <string name="fav_empty_hint">Ainda sem favoritos: use ⋮ › Adicionar aos favoritos</string>
+    <string name="favorites_title">⭐ Favoritos (toque longo para remover)</string>
+    <string name="close">Fechar</string>
+    <string name="history_empty">O histórico está vazio</string>
+    <string name="history_title">🕘 Histórico</string>
+    <string name="history_cleared">Histórico apagado</string>
+    <string name="engine_title">Mecanismo de busca</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">Versão 1.0\n\nO navegador com visual dos anos 90 e o motor de hoje.</string>
+    <string name="ok">OK</string>
+    <string name="desktop_on">Versão para computador ativa</string>
+    <string name="desktop_off">Versão móvel ativa</string>
+    <string name="tm_on">Máquina do tempo ativa: os sites abrem como em 1999</string>
+    <string name="tm_off">Máquina do tempo desativada</string>
+    <string name="download_started">Download: %1$s</string>
+    <string name="download_failed">Falha no download</string>
+    <string name="popup_blocked">Pop-up bloqueado</string>
+    <string name="no_app_for_link">Nenhum app pode abrir este link</string>
+    <string name="share_chooser_title">Compartilhar</string>
+    <string name="new_tab_title">Nova aba</string>
+    <string name="status_done_placeholder">Concluído</string>
+    <string name="status_opening">Abrindo %1$s…</string>
+    <string name="home_title">Página inicial</string>
+</resources>
