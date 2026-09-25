@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">输入网址或搜索内容…</string>
+    <string name="go">前往</string>
+    <string name="new_tab">新建标签页</string>
+    <string name="close_tab">关闭标签页</string>
+    <string name="add_favorite">添加到收藏夹</string>
+    <string name="favorites">收藏夹</string>
+    <string name="history">历史记录</string>
+    <string name="share_page">分享页面</string>
+    <string name="time_machine">时光机（1999 年的网络）</string>
+    <string name="desktop_version">桌面版</string>
+    <string name="search_engine">搜索引擎</string>
+    <string name="clear_history">清除历史记录</string>
+    <string name="about">关于</string>
+    <string name="fav_added">已添加到收藏夹</string>
+    <string name="fav_add_hint">打开一个网页后即可将其添加到收藏夹</string>
+    <string name="fav_empty_hint">暂无收藏：点击 ⋮ ›「添加到收藏夹」</string>
+    <string name="favorites_title">⭐ 收藏夹（长按可移除）</string>
+    <string name="close">关闭</string>
+    <string name="history_empty">历史记录为空</string>
+    <string name="history_title">🕘 历史记录</string>
+    <string name="history_cleared">历史记录已清除</string>
+    <string name="engine_title">搜索引擎</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">版本 1.0\n\n拥有 90 年代外观、搭载现代内核的浏览器。</string>
+    <string name="ok">确定</string>
+    <string name="desktop_on">桌面版已开启</string>
+    <string name="desktop_off">移动版已开启</string>
+    <string name="tm_on">时光机已开启：网站会以 1999 年的样子打开</string>
+    <string name="tm_off">时光机已关闭</string>
+    <string name="download_started">下载：%1$s</string>
+    <string name="download_failed">下载失败</string>
+    <string name="popup_blocked">弹出窗口已被拦截</string>
+    <string name="no_app_for_link">没有应用可以打开此链接</string>
+    <string name="share_chooser_title">分享</string>
+    <string name="new_tab_title">新建标签页</string>
+    <string name="status_done_placeholder">完成</string>
+    <string name="status_opening">正在打开 %1$s…</string>
+    <string name="home_title">主页</string>
+</resources>
