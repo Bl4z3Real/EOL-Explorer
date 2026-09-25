@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">اكتب عنوانًا أو ابحث…</string>
+    <string name="go">اذهب</string>
+    <string name="new_tab">علامة تبويب جديدة</string>
+    <string name="close_tab">إغلاق علامة التبويب</string>
+    <string name="add_favorite">إضافة إلى المفضلة</string>
+    <string name="favorites">المفضلة</string>
+    <string name="history">السجل</string>
+    <string name="share_page">مشاركة الصفحة</string>
+    <string name="time_machine">آلة الزمن (ويب 1999)</string>
+    <string name="desktop_version">إصدار سطح المكتب</string>
+    <string name="search_engine">محرك البحث</string>
+    <string name="clear_history">مسح السجل</string>
+    <string name="about">حول</string>
+    <string name="fav_added">أُضيف إلى المفضلة</string>
+    <string name="fav_add_hint">افتح صفحة لإضافتها إلى المفضلة</string>
+    <string name="fav_empty_hint">لا مفضلة بعد: استخدم ⋮ › إضافة إلى المفضلة</string>
+    <string name="favorites_title">⭐ المفضلة (اضغط مطولًا للإزالة)</string>
+    <string name="close">إغلاق</string>
+    <string name="history_empty">السجل فارغ</string>
+    <string name="history_title">🕘 السجل</string>
+    <string name="history_cleared">تم مسح السجل</string>
+    <string name="engine_title">محرك البحث</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">الإصدار 1.0\n\nمتصفح بمظهر التسعينيات ومحرك اليوم.</string>
+    <string name="ok">موافق</string>
+    <string name="desktop_on">إصدار سطح المكتب مفعّل</string>
+    <string name="desktop_off">إصدار الجوال مفعّل</string>
+    <string name="tm_on">آلة الزمن مفعّلة: تُفتح المواقع كما كانت عام 1999</string>
+    <string name="tm_off">آلة الزمن معطّلة</string>
+    <string name="download_started">تنزيل: %1$s</string>
+    <string name="download_failed">فشل التنزيل</string>
+    <string name="popup_blocked">تم حظر النافذة المنبثقة</string>
+    <string name="no_app_for_link">لا يوجد تطبيق يمكنه فتح هذا الرابط</string>
+    <string name="share_chooser_title">مشاركة</string>
+    <string name="new_tab_title">علامة تبويب جديدة</string>
+    <string name="status_done_placeholder">تم</string>
+    <string name="status_opening">جارٍ فتح %1$s…</string>
+    <string name="home_title">الصفحة الرئيسية</string>
+</resources>
