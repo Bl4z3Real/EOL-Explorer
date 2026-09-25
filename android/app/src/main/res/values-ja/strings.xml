@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">アドレスまたは検索語を入力…</string>
+    <string name="go">移動</string>
+    <string name="new_tab">新しいタブ</string>
+    <string name="close_tab">タブを閉じる</string>
+    <string name="add_favorite">お気に入りに追加</string>
+    <string name="favorites">お気に入り</string>
+    <string name="history">履歴</string>
+    <string name="share_page">ページを共有</string>
+    <string name="time_machine">タイムマシン（1999年のウェブ）</string>
+    <string name="desktop_version">デスクトップ版</string>
+    <string name="search_engine">検索エンジン</string>
+    <string name="clear_history">履歴を消去</string>
+    <string name="about">情報</string>
+    <string name="fav_added">お気に入りに追加しました</string>
+    <string name="fav_add_hint">ページを開いてお気に入りに追加してください</string>
+    <string name="fav_empty_hint">お気に入りはまだありません：⋮ ›「お気に入りに追加」をご利用ください</string>
+    <string name="favorites_title">⭐ お気に入り（長押しで削除）</string>
+    <string name="close">閉じる</string>
+    <string name="history_empty">履歴はありません</string>
+    <string name="history_title">🕘 履歴</string>
+    <string name="history_cleared">履歴を消去しました</string>
+    <string name="engine_title">検索エンジン</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">バージョン 1.0\n\n90年代の見た目と最新のエンジンを持つブラウザ。</string>
+    <string name="ok">OK</string>
+    <string name="desktop_on">デスクトップ版 ON</string>
+    <string name="desktop_off">モバイル版 ON</string>
+    <string name="tm_on">タイムマシン ON: サイトは1999年の見た目で開きます</string>
+    <string name="tm_off">タイムマシン OFF</string>
+    <string name="download_started">ダウンロード: %1$s</string>
+    <string name="download_failed">ダウンロードに失敗しました</string>
+    <string name="popup_blocked">ポップアップをブロックしました</string>
+    <string name="no_app_for_link">このリンクを開けるアプリがありません</string>
+    <string name="share_chooser_title">共有</string>
+    <string name="new_tab_title">新しいタブ</string>
+    <string name="status_done_placeholder">完了</string>
+    <string name="status_opening">%1$s を開いています…</string>
+    <string name="home_title">ホームページ</string>
+</resources>
