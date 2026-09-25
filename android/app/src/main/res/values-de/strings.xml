@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">Adresse eingeben oder suchen…</string>
+    <string name="go">Los</string>
+    <string name="new_tab">Neuer Tab</string>
+    <string name="close_tab">Tab schließen</string>
+    <string name="add_favorite">Zu Favoriten hinzufügen</string>
+    <string name="favorites">Favoriten</string>
+    <string name="history">Verlauf</string>
+    <string name="share_page">Seite teilen</string>
+    <string name="time_machine">Zeitmaschine (Web von 1999)</string>
+    <string name="desktop_version">Desktop-Version</string>
+    <string name="search_engine">Suchmaschine</string>
+    <string name="clear_history">Verlauf löschen</string>
+    <string name="about">Info</string>
+    <string name="fav_added">Zu Favoriten hinzugefügt</string>
+    <string name="fav_add_hint">Öffne eine Seite, um sie zu Favoriten hinzuzufügen</string>
+    <string name="fav_empty_hint">Noch keine Favoriten: nutze ⋮ › Zu Favoriten hinzufügen</string>
+    <string name="favorites_title">⭐ Favoriten (lange drücken zum Entfernen)</string>
+    <string name="close">Schließen</string>
+    <string name="history_empty">Der Verlauf ist leer</string>
+    <string name="history_title">🕘 Verlauf</string>
+    <string name="history_cleared">Verlauf gelöscht</string>
+    <string name="engine_title">Suchmaschine</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">Version 1.0\n\nDer Browser im 90er-Look mit der Technik von heute.</string>
+    <string name="ok">OK</string>
+    <string name="desktop_on">Desktop-Version aktiv</string>
+    <string name="desktop_off">Mobile Version aktiv</string>
+    <string name="tm_on">Zeitmaschine aktiv: Seiten öffnen sich wie 1999</string>
+    <string name="tm_off">Zeitmaschine deaktiviert</string>
+    <string name="download_started">Download: %1$s</string>
+    <string name="download_failed">Download fehlgeschlagen</string>
+    <string name="popup_blocked">Pop-up blockiert</string>
+    <string name="no_app_for_link">Keine App kann diesen Link öffnen</string>
+    <string name="share_chooser_title">Teilen</string>
+    <string name="new_tab_title">Neuer Tab</string>
+    <string name="status_done_placeholder">Fertig</string>
+    <string name="status_opening">%1$s wird geöffnet…</string>
+    <string name="home_title">Startseite</string>
+</resources>
