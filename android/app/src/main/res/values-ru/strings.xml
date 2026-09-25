@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EOL Explorer</string>
+    <string name="url_placeholder">Введите адрес или запрос…</string>
+    <string name="go">Перейти</string>
+    <string name="new_tab">Новая вкладка</string>
+    <string name="close_tab">Закрыть вкладку</string>
+    <string name="add_favorite">Добавить в избранное</string>
+    <string name="favorites">Избранное</string>
+    <string name="history">История</string>
+    <string name="share_page">Поделиться страницей</string>
+    <string name="time_machine">Машина времени (веб 1999 года)</string>
+    <string name="desktop_version">Версия для ПК</string>
+    <string name="search_engine">Поисковая система</string>
+    <string name="clear_history">Очистить историю</string>
+    <string name="about">О программе</string>
+    <string name="fav_added">Добавлено в избранное</string>
+    <string name="fav_add_hint">Откройте страницу, чтобы добавить её в избранное</string>
+    <string name="fav_empty_hint">Пока нет избранного: используйте ⋮ › Добавить в избранное</string>
+    <string name="favorites_title">⭐ Избранное (удержите, чтобы удалить)</string>
+    <string name="close">Закрыть</string>
+    <string name="history_empty">История пуста</string>
+    <string name="history_title">🕘 История</string>
+    <string name="history_cleared">История очищена</string>
+    <string name="engine_title">Поисковая система</string>
+    <string name="about_title">EOL Explorer</string>
+    <string name="about_message">Версия 1.0\n\nБраузер с видом 90-х и современным движком.</string>
+    <string name="ok">ОК</string>
+    <string name="desktop_on">Версия для ПК включена</string>
+    <string name="desktop_off">Мобильная версия включена</string>
+    <string name="tm_on">Машина времени включена: сайты открываются как в 1999 году</string>
+    <string name="tm_off">Машина времени выключена</string>
+    <string name="download_started">Загрузка: %1$s</string>
+    <string name="download_failed">Ошибка загрузки</string>
+    <string name="popup_blocked">Всплывающее окно заблокировано</string>
+    <string name="no_app_for_link">Ни одно приложение не может открыть эту ссылку</string>
+    <string name="share_chooser_title">Поделиться</string>
+    <string name="new_tab_title">Новая вкладка</string>
+    <string name="status_done_placeholder">Готово</string>
+    <string name="status_opening">Открывается %1$s…</string>
+    <string name="home_title">Домашняя страница</string>
+</resources>
